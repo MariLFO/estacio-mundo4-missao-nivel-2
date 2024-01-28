@@ -19,7 +19,21 @@ class StatelessWidgetExemplo extends StatelessWidget {
         title: Text(_appBarTitle),
       ),
       body: Center(
-        child: Text('Macoratti .net'),
+        child: // Exemplo de uma linha (Row) com três colunas
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: <Widget>[Icon(Icons.call), Text('Call')],
+            ),
+            Column(
+              children: <Widget>[Icon(Icons.directions), Text('Route')],
+            ),
+            Column(
+              children: <Widget>[Icon(Icons.share), Text('Share')],
+            ),
+          ],
+        )
       ),
     );
   }
