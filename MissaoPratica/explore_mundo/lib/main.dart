@@ -43,17 +43,15 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Flutter layout demo',
+      title: 'Demonstração de layout Flutter',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter layout demo'),
+          title: const Text('Demonstração de layout Flutter'),
         ),
-        body: ListView(
+        body: Column(
           children: [
-            const Center(
-              child: Text('Hello World'),
-            ),
             titleSection,
+            // Outros elementos do corpo do aplicativo podem ser adicionados aqui.
           ],
         ),
       ),
