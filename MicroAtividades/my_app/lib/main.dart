@@ -15,35 +15,28 @@ class StatelessWidgetExemplo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(_appBarTitle),
-      ),
-      body: Center(
-          child: // Exemplo de uma linha (Row) com três colunas
-          // Exemplo de uma ListView com três ListTile
-          ListView(
-            children: const [
-              ListTile(
-                title: Text('Flutter'),
-                subtitle: Text('Tudo é um widget'),
-                leading: Icon(Icons.flash_on),
-                trailing: Icon(Icons.keyboard_arrow_right),
-              ),
-              ListTile(
-                title: Text('Dart'),
-                subtitle: Text('É fácil'),
-                leading: Icon(Icons.mood),
-                trailing: Icon(Icons.keyboard_arrow_right),
-              ),
-              ListTile(
-                title: Text('Firebase'),
-                subtitle: Text('Combina com Flutter'),
-                leading: Icon(Icons.whatshot),
-                trailing: Icon(Icons.keyboard_arrow_right),
-              ),
-            ],
-          )
-      ),
+        appBar: AppBar(
+          title: Text(_appBarTitle),
+        ),
+        body: Stack(
+          children: [
+            Container(
+              width: 250,
+              height: 250,
+              color: Colors.blue,
+            ),
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.red,
+            ),
+            Container(
+              width: 150,
+              height: 150,
+              color: Colors.yellow,
+            )
+          ],
+        )
     );
   }
 }
